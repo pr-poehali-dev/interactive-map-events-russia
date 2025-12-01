@@ -254,35 +254,75 @@ const Index = () => {
               <rect width="100" height="100" fill="url(#gridPattern)" />
               
               <path
-                d="M 25,15 L 50,12 L 65,18 L 80,15 L 85,25 L 88,40 L 85,55 L 82,70 L 75,78 L 65,82 L 50,85 L 35,82 L 25,75 L 20,60 L 18,45 L 20,30 Z"
+                d="M 22,18 L 28,15 L 35,14 L 42,13 L 48,12 L 54,13 L 60,15 L 66,17 L 72,16 L 78,15 L 82,17 L 85,20 L 87,25 L 88,30 L 89,35 L 88,40 L 87,45 L 86,50 L 85,55 L 84,60 L 83,65 L 82,70 L 80,74 L 77,77 L 73,79 L 68,81 L 63,82 L 58,83 L 53,84 L 48,85 L 43,84 L 38,83 L 33,82 L 28,80 L 25,77 L 23,73 L 21,68 L 20,63 L 19,58 L 18,53 L 18,48 L 19,43 L 20,38 L 21,33 L 22,28 L 23,23 Z"
                 fill={selectedPeriod === 'all' ? '#fbbf24' : getPeriodColor(selectedPeriod)}
                 fillOpacity="0.35"
-                stroke="#64748b"
-                strokeWidth="0.4"
-                strokeDasharray="1,0.5"
+                stroke="#475569"
+                strokeWidth="0.3"
+                strokeLinejoin="round"
                 className="transition-all duration-500"
               />
               
-              <path d="M 30,20 Q 35,25 40,20 Q 45,30 50,25 Q 55,35 60,30" 
-                stroke="#3b82f6" 
-                strokeWidth="0.8" 
-                fill="none" 
-                opacity="0.4"
+              <path
+                d="M 22,18 L 28,15 L 35,14 L 42,13 L 48,12 L 54,13 L 60,15 L 66,17 L 72,16 L 78,15 L 82,17 L 85,20 L 87,25 L 88,30 L 89,35 L 88,40 L 87,45 L 86,50 L 85,55 L 84,60 L 83,65 L 82,70 L 80,74 L 77,77 L 73,79 L 68,81 L 63,82 L 58,83 L 53,84 L 48,85 L 43,84 L 38,83 L 33,82 L 28,80 L 25,77 L 23,73 L 21,68 L 20,63 L 19,58 L 18,53 L 18,48 L 19,43 L 20,38 L 21,33 L 22,28 L 23,23 Z"
+                fill="none"
+                stroke="#334155"
+                strokeWidth="0.5"
+                strokeLinejoin="round"
+                strokeDasharray="1.5,1"
+                opacity="0.6"
               />
               
-              <path d="M 50,30 Q 52,40 54,50 Q 56,60 58,70" 
-                stroke="#3b82f6" 
-                strokeWidth="0.6" 
-                fill="none" 
-                opacity="0.4"
+              <path
+                d="M 24,20 C 26,19 28,18 30,19 C 32,20 34,21 36,20 C 38,19 40,18 42,19 C 44,20 46,22 48,21 C 50,20 52,21 54,22 C 56,23 58,24 60,23"
+                stroke="#3b82f6"
+                strokeWidth="0.9"
+                fill="none"
+                opacity="0.5"
+                strokeLinecap="round"
               />
               
-              <path d="M 35,40 Q 45,42 55,40 Q 65,42 75,45" 
-                stroke="#3b82f6" 
-                strokeWidth="0.5" 
-                fill="none" 
-                opacity="0.3"
+              <path
+                d="M 60,23 C 62,24 64,25 66,26 C 68,27 70,26 72,27"
+                stroke="#3b82f6"
+                strokeWidth="0.7"
+                fill="none"
+                opacity="0.4"
+                strokeLinecap="round"
               />
+              
+              <path
+                d="M 48,24 C 49,28 50,32 51,36 C 52,40 53,44 54,48 C 55,52 56,56 57,60 C 58,64 58,68 59,72"
+                stroke="#3b82f6"
+                strokeWidth="0.8"
+                fill="none"
+                opacity="0.5"
+                strokeLinecap="round"
+              />
+              
+              <path
+                d="M 30,38 C 35,39 40,40 45,40 C 50,40 55,41 60,42 C 65,43 70,44 75,46"
+                stroke="#3b82f6"
+                strokeWidth="0.6"
+                fill="none"
+                opacity="0.4"
+                strokeLinecap="round"
+              />
+              
+              <path
+                d="M 25,55 C 28,56 31,57 34,58 C 37,59 40,60 43,60"
+                stroke="#3b82f6"
+                strokeWidth="0.5"
+                fill="none"
+                opacity="0.35"
+                strokeLinecap="round"
+              />
+              
+              <circle cx="40" cy="20" r="0.4" fill="#60a5fa" opacity="0.6" />
+              <circle cx="48" cy="18" r="0.5" fill="#60a5fa" opacity="0.6" />
+              <circle cx="65" cy="25" r="0.4" fill="#60a5fa" opacity="0.6" />
+              <circle cx="55" cy="50" r="0.45" fill="#60a5fa" opacity="0.6" />
+              <circle cx="35" cy="60" r="0.4" fill="#60a5fa" opacity="0.6" />
             </svg>
 
             {filteredEvents.map((event, index) => (
