@@ -248,36 +248,27 @@ const Index = () => {
             </h2>
           </div>
           <div className="relative w-full aspect-[16/9] bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg overflow-hidden border-2 border-slate-400 shadow-inner">
-            <svg className="absolute inset-0 w-full h-full" viewBox="0 0 120 80" preserveAspectRatio="xMidYMid meet">
+            <svg className="absolute inset-0 w-full h-full" viewBox="0 0 140 90" preserveAspectRatio="xMidYMid meet">
               <defs>
                 <filter id="shadow">
                   <feDropShadow dx="0.1" dy="0.1" stdDeviation="0.15" floodOpacity="0.25"/>
                 </filter>
               </defs>
               
-              <rect width="120" height="80" fill="#a8bfd5" />
+              <rect width="140" height="90" fill="#a8bfd5" />
               
               <path
-                d="M 60,8 L 65,10 L 70,12 L 75,15 L 80,18 L 85,22 L 88,26 L 90,30 L 91,35 L 90,40 L 88,45 L 85,50 L 82,54 L 78,57 L 73,59 L 68,60 L 63,60 L 58,59 L 53,57 L 48,54 L 44,50 L 40,46 L 37,42 L 35,38 L 34,34 L 35,30 L 37,26 L 40,22 L 44,19 L 48,17 L 53,15 L 58,13 L 60,8 Z"
-                fill="#e8775e"
-                fillOpacity="0.85"
+                d="M 5,15 L 8,13 L 12,12 L 16,13 L 19,15 L 21,18 L 22,22 L 21,26 L 19,29 L 16,31 L 12,32 L 8,31 L 5,29 L 3,26 L 2,22 L 3,18 Z"
+                fill="#f5deb3"
+                fillOpacity="0.8"
                 stroke="#2c1810"
                 strokeWidth="0.25"
                 strokeLinejoin="round"
               />
               
               <path
-                d="M 58,59 L 63,58 L 68,57 L 73,56 L 78,56 L 83,57 L 86,59 L 88,62 L 89,66 L 88,70 L 85,73 L 80,75 L 75,76 L 70,76 L 65,75 L 60,73 L 56,70 L 54,66 L 54,62 L 55,59 L 58,59 Z"
-                fill="#d4a574"
-                fillOpacity="0.85"
-                stroke="#2c1810"
-                strokeWidth="0.25"
-                strokeLinejoin="round"
-              />
-              
-              <path
-                d="M 15,35 L 18,33 L 22,32 L 26,32 L 30,33 L 33,35 L 35,38 L 35,42 L 33,46 L 30,49 L 26,51 L 22,52 L 18,51 L 15,49 L 13,46 L 12,42 L 13,38 L 15,35 Z"
-                fill="#e0b3e0"
+                d="M 15,25 L 19,24 L 23,24 L 27,25 L 30,27 L 32,30 L 33,34 L 32,38 L 30,41 L 27,43 L 23,44 L 19,43 L 16,41 L 14,38 L 13,34 L 14,30 Z"
+                fill="#b8d4b8"
                 fillOpacity="0.75"
                 stroke="#2c1810"
                 strokeWidth="0.25"
@@ -285,7 +276,16 @@ const Index = () => {
               />
               
               <path
-                d="M 30,49 L 33,48 L 37,48 L 40,49 L 42,51 L 43,54 L 42,57 L 40,60 L 37,62 L 33,63 L 29,62 L 26,60 L 24,57 L 24,54 L 26,51 L 30,49 Z"
+                d="M 20,40 L 23,39 L 27,39 L 30,40 L 33,42 L 35,45 L 36,49 L 35,53 L 33,57 L 30,60 L 27,62 L 23,63 L 19,62 L 16,60 L 14,57 L 13,53 L 14,49 L 16,45 Z"
+                fill="#e6ccb3"
+                fillOpacity="0.75"
+                stroke="#2c1810"
+                strokeWidth="0.25"
+                strokeLinejoin="round"
+              />
+              
+              <path
+                d="M 28,54 L 32,53 L 36,53 L 40,54 L 43,56 L 45,59 L 46,63 L 45,67 L 43,70 L 40,72 L 36,73 L 32,72 L 29,70 L 27,67 L 26,63 L 27,59 Z"
                 fill="#98d98e"
                 fillOpacity="0.75"
                 stroke="#2c1810"
@@ -294,7 +294,52 @@ const Index = () => {
               />
               
               <path
-                d="M 90,48 L 93,50 L 95,53 L 96,57 L 95,61 L 93,64 L 90,66 L 86,67 L 82,66 L 79,64 L 77,61 L 77,57 L 79,53 L 82,51 L 86,49 L 90,48 Z"
+                d="M 13,40 L 17,38 L 21,37 L 25,37 L 29,38 L 32,40 L 34,43 L 35,47 L 34,51 L 32,54 L 29,56 L 25,57 L 21,56 L 18,54 L 16,51 L 15,47 L 16,43 Z"
+                fill="#e0b3e0"
+                fillOpacity="0.75"
+                stroke="#2c1810"
+                strokeWidth="0.25"
+                strokeLinejoin="round"
+              />
+              
+              <path
+                d="M 33,28 L 37,27 L 41,27 L 45,28 L 48,30 L 50,33 L 51,37 L 50,41 L 48,44 L 45,46 L 41,47 L 37,46 L 34,44 L 32,41 L 31,37 L 32,33 Z"
+                fill="#d4b896"
+                fillOpacity="0.75"
+                stroke="#2c1810"
+                strokeWidth="0.25"
+                strokeLinejoin="round"
+              />
+              
+              <path
+                d="M 38,44 L 42,43 L 46,43 L 51,44 L 55,46 L 58,49 L 60,53 L 61,58 L 60,63 L 58,67 L 55,70 L 51,72 L 46,73 L 42,72 L 38,70 L 35,67 L 33,63 L 32,58 L 33,53 L 35,49 Z"
+                fill="#f0c896"
+                fillOpacity="0.75"
+                stroke="#2c1810"
+                strokeWidth="0.25"
+                strokeLinejoin="round"
+              />
+              
+              <path
+                d="M 68,10 L 73,11 L 78,13 L 83,16 L 88,19 L 93,23 L 97,28 L 100,33 L 102,38 L 103,44 L 102,50 L 100,55 L 97,60 L 93,64 L 88,67 L 83,69 L 78,70 L 73,70 L 68,69 L 63,67 L 58,64 L 54,60 L 50,55 L 47,50 L 45,44 L 44,38 L 45,33 L 47,28 L 50,23 L 54,19 L 58,16 L 63,13 L 68,10 Z"
+                fill="#e8775e"
+                fillOpacity="0.85"
+                stroke="#2c1810"
+                strokeWidth="0.3"
+                strokeLinejoin="round"
+              />
+              
+              <path
+                d="M 65,68 L 70,67 L 75,66 L 80,66 L 85,67 L 90,69 L 94,72 L 97,76 L 99,81 L 99,86 L 97,89 L 94,91 L 90,92 L 85,93 L 80,93 L 75,92 L 70,90 L 66,87 L 63,83 L 62,78 L 62,73 L 63,68 Z"
+                fill="#d4a574"
+                fillOpacity="0.85"
+                stroke="#2c1810"
+                strokeWidth="0.3"
+                strokeLinejoin="round"
+              />
+              
+              <path
+                d="M 102,52 L 106,54 L 110,57 L 113,61 L 115,66 L 115,71 L 113,75 L 110,78 L 106,80 L 102,81 L 98,80 L 95,78 L 93,75 L 92,71 L 92,66 L 93,61 L 95,57 L 98,54 Z"
                 fill="#f5c77e"
                 fillOpacity="0.75"
                 stroke="#2c1810"
@@ -303,7 +348,25 @@ const Index = () => {
               />
               
               <path
-                d="M 48,28 Q 50,32 52,28 M 52,28 Q 54,33 56,30 M 56,30 Q 58,35 60,32"
+                d="M 115,45 L 119,47 L 122,50 L 124,54 L 125,58 L 124,62 L 122,65 L 119,67 L 115,68 L 111,67 L 108,65 L 106,62 L 105,58 L 106,54 L 108,50 L 111,47 Z"
+                fill="#e8d4a8"
+                fillOpacity="0.75"
+                stroke="#2c1810"
+                strokeWidth="0.25"
+                strokeLinejoin="round"
+              />
+              
+              <path
+                d="M 52,5 L 48,7 L 45,10 L 43,14 L 42,18 L 43,22 L 45,25 L 48,27 L 52,28 L 56,27 L 59,25 L 61,22 L 62,18 L 61,14 L 59,10 L 56,7 Z"
+                fill="#c0d0e8"
+                fillOpacity="0.75"
+                stroke="#2c1810"
+                strokeWidth="0.25"
+                strokeLinejoin="round"
+              />
+              
+              <path
+                d="M 55,32 Q 58,37 60,34 M 60,34 Q 62,39 64,36 M 64,36 Q 66,41 68,38 M 68,38 Q 70,43 72,40"
                 stroke="#6699cc"
                 strokeWidth="0.6"
                 fill="none"
@@ -311,7 +374,7 @@ const Index = () => {
               />
               
               <path
-                d="M 60,35 Q 62,40 64,38 Q 66,42 68,40 Q 70,44 72,42"
+                d="M 68,40 Q 70,45 72,43 Q 74,48 76,46 Q 78,51 80,49 Q 82,54 84,52"
                 stroke="#6699cc"
                 strokeWidth="0.5"
                 fill="none"
@@ -319,22 +382,63 @@ const Index = () => {
               />
               
               <path
-                d="M 55,40 Q 57,45 59,48 Q 61,52 63,55 Q 65,58 67,61"
+                d="M 62,45 Q 64,50 66,53 Q 68,57 70,61 Q 72,65 74,69 Q 76,73 78,77"
                 stroke="#6699cc"
                 strokeWidth="0.7"
                 fill="none"
                 opacity="0.7"
               />
               
-              <text x="60" y="10" fontSize="3" fontFamily="Arial, sans-serif" fill="#cc0000" fontWeight="bold">862</text>
+              <path
+                d="M 80,55 Q 82,60 84,58 Q 86,63 88,61 Q 90,66 92,64"
+                stroke="#6699cc"
+                strokeWidth="0.5"
+                fill="none"
+                opacity="0.7"
+              />
               
-              <text x="63" y="33" fontSize="2" fontFamily="Arial, sans-serif" fill="#000000" fontWeight="600">Kievan Rus</text>
-              <text x="60" y="25" fontSize="1.8" fontFamily="Arial, sans-serif" fill="#000000">Novgorod</text>
-              <text x="58" y="52" fontSize="1.8" fontFamily="Arial, sans-serif" fill="#000000">Kiev</text>
+              <path
+                d="M 25,60 Q 27,63 29,61 Q 31,64 33,62 Q 35,65 37,63"
+                stroke="#6699cc"
+                strokeWidth="0.4"
+                fill="none"
+                opacity="0.6"
+              />
               
-              <text x="75" y="66" fontSize="1.8" fontFamily="Arial, sans-serif" fill="#000000">Khazars</text>
-              <text x="18" y="40" fontSize="1.6" fontFamily="Arial, sans-serif" fill="#000000">Scotland</text>
-              <text x="32" y="58" fontSize="1.6" fontFamily="Arial, sans-serif" fill="#000000">Emirate of Cordoba</text>
+              <path
+                d="M 0,50 C 10,52 20,54 30,53 M 0,55 C 12,57 24,59 36,58 M 0,60 C 15,62 30,64 45,63 M 0,65 C 18,67 36,69 54,68"
+                stroke="#7db3cc"
+                strokeWidth="0.3"
+                fill="none"
+                opacity="0.5"
+                strokeDasharray="1,1"
+              />
+              
+              <path
+                d="M 50,0 C 52,10 54,20 55,30 M 60,0 C 62,12 64,24 65,36 M 70,0 C 72,15 74,30 75,45 M 80,0 C 82,18 84,36 85,54"
+                stroke="#7db3cc"
+                strokeWidth="0.3"
+                fill="none"
+                opacity="0.5"
+                strokeDasharray="1,1"
+              />
+              
+              <text x="70" y="12" fontSize="3" fontFamily="Arial, sans-serif" fill="#cc0000" fontWeight="bold">862</text>
+              
+              <text x="73" y="38" fontSize="2" fontFamily="Arial, sans-serif" fill="#000000" fontWeight="600">Kievan Rus</text>
+              <text x="68" y="28" fontSize="1.8" fontFamily="Arial, sans-serif" fill="#000000">Novgorod</text>
+              <text x="66" y="60" fontSize="1.8" fontFamily="Arial, sans-serif" fill="#000000">Kiev</text>
+              
+              <text x="85" y="76" fontSize="1.8" fontFamily="Arial, sans-serif" fill="#000000">Khazar Khaganate</text>
+              <text x="22" y="48" fontSize="1.6" fontFamily="Arial, sans-serif" fill="#000000">Scotland</text>
+              <text x="35" y="65" fontSize="1.6" fontFamily="Arial, sans-serif" fill="#000000">Al-Andalus</text>
+              <text x="12" y="22" fontSize="1.5" fontFamily="Arial, sans-serif" fill="#000000">Norway</text>
+              <text x="23" y="35" fontSize="1.5" fontFamily="Arial, sans-serif" fill="#000000">Denmark</text>
+              <text x="42" y="38" fontSize="1.5" fontFamily="Arial, sans-serif" fill="#000000">Francia</text>
+              <text x="40" y="58" fontSize="1.5" fontFamily="Arial, sans-serif" fill="#000000">Italy</text>
+              <text x="54" y="18" fontSize="1.5" fontFamily="Arial, sans-serif" fill="#000000">Sweden</text>
+              <text x="110" y="60" fontSize="1.5" fontFamily="Arial, sans-serif" fill="#000000">Volga Bulgaria</text>
+              <text x="118" y="56" fontSize="1.5" fontFamily="Arial, sans-serif" fill="#000000">Pechenegs</text>
             </svg>
 
             {filteredEvents.map((event, index) => (
