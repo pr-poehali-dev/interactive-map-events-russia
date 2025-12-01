@@ -277,13 +277,41 @@ const Index = () => {
                   animationDelay: `${index * 0.05}s`
                 }}
               >
-                <div className="relative">
-                  <div
-                    className="w-4 h-4 rounded-full animate-pulse-glow transition-transform duration-300 group-hover:scale-150"
-                    style={{ backgroundColor: getPeriodColor(event.period) }}
-                  />
-                  <div className="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                    <div className="bg-slate-900/95 backdrop-blur-sm px-3 py-1 rounded-lg text-xs font-semibold whitespace-nowrap border border-purple-500/30 shadow-xl">
+                <div className="relative flex flex-col items-center">
+                  <svg width="32" height="40" viewBox="0 0 32 40" className="transition-transform duration-300 group-hover:scale-125">
+                    <rect x="4" y="8" width="24" height="20" rx="2" 
+                      fill={getPeriodColor(event.period)} 
+                      opacity="0.3"
+                      className="transition-opacity group-hover:opacity-50"
+                    />
+                    <rect x="6" y="10" width="8" height="6" rx="1" 
+                      fill={getPeriodColor(event.period)} 
+                      opacity="0.6"
+                    />
+                    <rect x="18" y="10" width="8" height="6" rx="1" 
+                      fill={getPeriodColor(event.period)} 
+                      opacity="0.6"
+                    />
+                    <rect x="6" y="18" width="8" height="6" rx="1" 
+                      fill={getPeriodColor(event.period)} 
+                      opacity="0.6"
+                    />
+                    <rect x="18" y="18" width="8" height="6" rx="1" 
+                      fill={getPeriodColor(event.period)} 
+                      opacity="0.6"
+                    />
+                    <circle cx="16" cy="32" r="3" 
+                      fill={getPeriodColor(event.period)}
+                      className="animate-pulse-glow"
+                    />
+                    <line x1="16" y1="28" x2="16" y2="32" 
+                      stroke={getPeriodColor(event.period)} 
+                      strokeWidth="2"
+                    />
+                  </svg>
+                  
+                  <div className="mt-1 text-center">
+                    <div className="text-[10px] font-bold text-white bg-slate-900/80 px-2 py-0.5 rounded backdrop-blur-sm border border-purple-500/30 whitespace-nowrap">
                       {event.city}
                     </div>
                   </div>
