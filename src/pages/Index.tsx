@@ -238,91 +238,94 @@ const Index = () => {
         </div>
 
         <Card className="p-4 md:p-8 bg-white border-slate-300 shadow-2xl animate-scale-in">
-          <div className="relative w-full aspect-[16/10] bg-gradient-to-br from-blue-50 via-slate-50 to-blue-100 rounded-xl overflow-hidden border-2 border-slate-400">
+          <div className="relative w-full aspect-[16/10] bg-white rounded-xl overflow-hidden border-2 border-black">
             <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
               <defs>
-                <pattern id="gridPattern" width="10" height="10" patternUnits="userSpaceOnUse">
-                  <line x1="0" y1="0" x2="0" y2="10" stroke="#cbd5e1" strokeWidth="0.05" opacity="0.3" />
-                  <line x1="0" y1="0" x2="10" y2="0" stroke="#cbd5e1" strokeWidth="0.05" opacity="0.3" />
+                <pattern id="gridPattern" width="5" height="5" patternUnits="userSpaceOnUse">
+                  <line x1="0" y1="0" x2="0" y2="5" stroke="#000000" strokeWidth="0.03" opacity="0.15" />
+                  <line x1="0" y1="0" x2="5" y2="0" stroke="#000000" strokeWidth="0.03" opacity="0.15" />
                 </pattern>
-                <linearGradient id="territoryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="{getPeriodColor(selectedPeriod)}" stopOpacity="0.3" />
-                  <stop offset="100%" stopColor="{getPeriodColor(selectedPeriod)}" stopOpacity="0.15" />
-                </linearGradient>
               </defs>
               
+              <rect width="100" height="100" fill="#fefefe" />
               <rect width="100" height="100" fill="url(#gridPattern)" />
               
               <path
-                d="M 22,18 L 28,15 L 35,14 L 42,13 L 48,12 L 54,13 L 60,15 L 66,17 L 72,16 L 78,15 L 82,17 L 85,20 L 87,25 L 88,30 L 89,35 L 88,40 L 87,45 L 86,50 L 85,55 L 84,60 L 83,65 L 82,70 L 80,74 L 77,77 L 73,79 L 68,81 L 63,82 L 58,83 L 53,84 L 48,85 L 43,84 L 38,83 L 33,82 L 28,80 L 25,77 L 23,73 L 21,68 L 20,63 L 19,58 L 18,53 L 18,48 L 19,43 L 20,38 L 21,33 L 22,28 L 23,23 Z"
-                fill={selectedPeriod === 'all' ? '#fbbf24' : getPeriodColor(selectedPeriod)}
-                fillOpacity="0.35"
-                stroke="#475569"
-                strokeWidth="0.3"
+                d="M 48,18 L 50,20 L 52,19 L 55,21 L 55,35 L 53,38 L 48,38 L 48,18 Z"
+                fill="#ffc0cb"
+                stroke="#000000"
+                strokeWidth="0.25"
                 strokeLinejoin="round"
-                className="transition-all duration-500"
               />
               
               <path
-                d="M 22,18 L 28,15 L 35,14 L 42,13 L 48,12 L 54,13 L 60,15 L 66,17 L 72,16 L 78,15 L 82,17 L 85,20 L 87,25 L 88,30 L 89,35 L 88,40 L 87,45 L 86,50 L 85,55 L 84,60 L 83,65 L 82,70 L 80,74 L 77,77 L 73,79 L 68,81 L 63,82 L 58,83 L 53,84 L 48,85 L 43,84 L 38,83 L 33,82 L 28,80 L 25,77 L 23,73 L 21,68 L 20,63 L 19,58 L 18,53 L 18,48 L 19,43 L 20,38 L 21,33 L 22,28 L 23,23 Z"
-                fill="none"
-                stroke="#334155"
-                strokeWidth="0.5"
+                d="M 48,38 L 53,38 L 55,40 L 55,52 L 52,55 L 48,55 L 45,52 L 45,40 L 48,38 Z"
+                fill="#ffff99"
+                stroke="#000000"
+                strokeWidth="0.25"
                 strokeLinejoin="round"
-                strokeDasharray="1.5,1"
-                opacity="0.6"
               />
               
               <path
-                d="M 24,20 C 26,19 28,18 30,19 C 32,20 34,21 36,20 C 38,19 40,18 42,19 C 44,20 46,22 48,21 C 50,20 52,21 54,22 C 56,23 58,24 60,23"
-                stroke="#3b82f6"
-                strokeWidth="0.9"
+                d="M 55,35 L 58,35 L 62,33 L 65,35 L 68,33 L 70,35 L 72,38 L 70,42 L 68,45 L 65,48 L 62,50 L 58,52 L 55,52 L 55,40 L 55,35 Z"
+                fill="#e6e6fa"
+                stroke="#000000"
+                strokeWidth="0.25"
+                strokeLinejoin="round"
+              />
+              
+              <path
+                d="M 30,30 L 35,28 L 40,30 L 45,28 L 48,30 L 48,38 L 45,40 L 40,42 L 35,40 L 30,42 L 25,40 L 22,35 L 25,30 L 30,30 Z"
+                fill="#d3d3d3"
+                stroke="#000000"
+                strokeWidth="0.25"
+                strokeLinejoin="round"
+              />
+              
+              <path
+                d="M 25,42 L 30,42 L 35,45 L 40,48 L 45,50 L 45,52 L 40,55 L 35,58 L 30,60 L 25,58 L 22,55 L 20,50 L 20,45 L 25,42 Z"
+                fill="#ffe4b5"
+                stroke="#000000"
+                strokeWidth="0.25"
+                strokeLinejoin="round"
+              />
+              
+              <path
+                d="M 60,55 L 65,53 L 70,55 L 75,58 L 78,62 L 80,68 L 78,72 L 75,75 L 70,78 L 65,80 L 60,78 L 56,75 L 54,70 L 55,65 L 58,60 L 60,55 Z"
+                fill="#f0e68c"
+                stroke="#000000"
+                strokeWidth="0.25"
+                strokeLinejoin="round"
+              />
+              
+              <path
+                d="M 35,25 Q 38,27 41,26 Q 44,28 47,27"
+                stroke="#87ceeb"
+                strokeWidth="0.4"
                 fill="none"
-                opacity="0.5"
-                strokeLinecap="round"
               />
               
               <path
-                d="M 60,23 C 62,24 64,25 66,26 C 68,27 70,26 72,27"
-                stroke="#3b82f6"
-                strokeWidth="0.7"
-                fill="none"
-                opacity="0.4"
-                strokeLinecap="round"
-              />
-              
-              <path
-                d="M 48,24 C 49,28 50,32 51,36 C 52,40 53,44 54,48 C 55,52 56,56 57,60 C 58,64 58,68 59,72"
-                stroke="#3b82f6"
-                strokeWidth="0.8"
-                fill="none"
-                opacity="0.5"
-                strokeLinecap="round"
-              />
-              
-              <path
-                d="M 30,38 C 35,39 40,40 45,40 C 50,40 55,41 60,42 C 65,43 70,44 75,46"
-                stroke="#3b82f6"
-                strokeWidth="0.6"
-                fill="none"
-                opacity="0.4"
-                strokeLinecap="round"
-              />
-              
-              <path
-                d="M 25,55 C 28,56 31,57 34,58 C 37,59 40,60 43,60"
-                stroke="#3b82f6"
+                d="M 48,35 Q 50,40 52,45 Q 54,50 56,55"
+                stroke="#87ceeb"
                 strokeWidth="0.5"
                 fill="none"
-                opacity="0.35"
-                strokeLinecap="round"
               />
               
-              <circle cx="40" cy="20" r="0.4" fill="#60a5fa" opacity="0.6" />
-              <circle cx="48" cy="18" r="0.5" fill="#60a5fa" opacity="0.6" />
-              <circle cx="65" cy="25" r="0.4" fill="#60a5fa" opacity="0.6" />
-              <circle cx="55" cy="50" r="0.45" fill="#60a5fa" opacity="0.6" />
-              <circle cx="35" cy="60" r="0.4" fill="#60a5fa" opacity="0.6" />
+              <path
+                d="M 30,45 Q 35,46 40,46 Q 45,47 50,48"
+                stroke="#87ceeb"
+                strokeWidth="0.4"
+                fill="none"
+              />
+              
+              <text x="32" y="35" fontSize="2.5" fontFamily="serif" fill="#000000" opacity="0.8">Новгород</text>
+              <text x="50" y="28" fontSize="2" fontFamily="serif" fill="#000000" opacity="0.8" fontStyle="italic">Ладога</text>
+              <text x="50" y="46" fontSize="2.5" fontFamily="serif" fill="#000000" opacity="0.8">Ростов</text>
+              <text x="48" y="58" fontSize="2" fontFamily="serif" fill="#000000" opacity="0.8" fontStyle="italic">Муром</text>
+              <text x="62" y="45" fontSize="2" fontFamily="serif" fill="#000000" opacity="0.8" fontStyle="italic">Полоцк</text>
+              <text x="48" y="70" fontSize="2.5" fontFamily="serif" fill="#000000" opacity="0.8">Киев</text>
+              <text x="68" y="70" fontSize="2" fontFamily="serif" fill="#000000" opacity="0.8" fontStyle="italic">Чернигов</text>
             </svg>
 
             {filteredEvents.map((event, index) => (
@@ -339,24 +342,19 @@ const Index = () => {
                 <div className="relative flex flex-col items-center">
                   <div className="relative">
                     <div 
-                      className="w-2 h-2 rounded-full border-2 bg-white transition-all duration-300 group-hover:scale-150 group-hover:shadow-lg"
-                      style={{ 
-                        borderColor: getPeriodColor(event.period),
-                        boxShadow: `0 0 8px ${getPeriodColor(event.period)}80`
-                      }}
+                      className="w-1.5 h-1.5 rounded-full bg-black transition-all duration-300 group-hover:scale-150"
                     />
                   </div>
                   
-                  <div className="mt-1.5 text-center">
+                  <div className="mt-1 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div 
-                      className="text-[9px] font-bold px-1.5 py-0.5 whitespace-nowrap transition-all duration-300 group-hover:scale-110"
+                      className="text-[8px] font-bold px-1 py-0.5 whitespace-nowrap bg-white/90 border border-black rounded"
                       style={{
-                        color: '#1e293b',
-                        fontFamily: 'serif',
-                        textShadow: '0 0 3px white, 0 0 5px white'
+                        color: '#000000',
+                        fontFamily: 'serif'
                       }}
                     >
-                      {event.city.toUpperCase()}
+                      {event.city}
                     </div>
                   </div>
                 </div>
