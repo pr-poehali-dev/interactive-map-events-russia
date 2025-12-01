@@ -196,24 +196,27 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-4 md:p-8">
-      <div className="max-w-7xl mx-auto space-y-6">
+    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 p-4 md:p-8">
+      <div className="max-w-7xl mx-auto space-y-8">
         <div className="text-center space-y-4 animate-fade-in">
-          <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-fuchsia-400 to-cyan-400">
-            История России
-          </h1>
-          <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto">
-            Интерактивная карта событий с 862 по 2025 год
+          <div className="inline-block">
+            <h1 className="text-5xl md:text-7xl font-bold text-slate-900 mb-2" style={{ fontFamily: 'serif' }}>
+              История России
+            </h1>
+            <div className="h-1 bg-gradient-to-r from-transparent via-amber-600 to-transparent"></div>
+          </div>
+          <p className="text-lg md:text-xl text-slate-700 max-w-2xl mx-auto font-medium">
+            Интерактивная карта исторических событий • 862—2025
           </p>
         </div>
 
         <div className="flex flex-wrap gap-3 justify-center animate-scale-in">
           <button
             onClick={() => setSelectedPeriod('all')}
-            className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
+            className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 border-2 ${
               selectedPeriod === 'all'
-                ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white shadow-lg shadow-purple-500/50 scale-105'
-                : 'bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 hover:scale-105'
+                ? 'bg-slate-900 text-white border-slate-900 shadow-xl scale-105'
+                : 'bg-white text-slate-700 border-slate-300 hover:border-slate-400 hover:shadow-lg hover:scale-105'
             }`}
           >
             Все эпохи
@@ -222,23 +225,29 @@ const Index = () => {
             <button
               key={period.id}
               onClick={() => setSelectedPeriod(period.id)}
-              className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 border-2 ${
                 selectedPeriod === period.id
-                  ? `bg-gradient-to-r ${period.gradient} text-white shadow-lg scale-105`
-                  : 'bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 hover:scale-105'
+                  ? 'text-white shadow-xl scale-105'
+                  : 'bg-white text-slate-700 border-slate-300 hover:border-slate-400 hover:shadow-lg hover:scale-105'
               }`}
               style={{
-                boxShadow: selectedPeriod === period.id ? `0 0 30px ${period.color}80` : 'none'
+                backgroundColor: selectedPeriod === period.id ? period.color : undefined,
+                borderColor: selectedPeriod === period.id ? period.color : undefined
               }}
             >
               <div className="text-sm font-bold">{period.name}</div>
-              <div className="text-xs opacity-80">{period.years}</div>
+              <div className="text-xs opacity-90">{period.years}</div>
             </button>
           ))}
         </div>
 
-        <Card className="p-4 md:p-8 bg-white border-slate-300 shadow-2xl animate-scale-in">
-          <div className="relative w-full aspect-[16/10] bg-white rounded-xl overflow-hidden border-2 border-black">
+        <Card className="p-6 md:p-10 bg-gradient-to-br from-white to-amber-50/30 border-2 border-slate-800 shadow-2xl animate-scale-in">
+          <div className="mb-4 pb-3 border-b-2 border-slate-300">
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900" style={{ fontFamily: 'serif' }}>
+              Историческая карта территорий
+            </h2>
+          </div>
+          <div className="relative w-full aspect-[16/10] bg-gradient-to-br from-amber-50 to-blue-50 rounded-lg overflow-hidden border-3 border-slate-800 shadow-inner">
             <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
               <defs>
                 <pattern id="gridPattern" width="5" height="5" patternUnits="userSpaceOnUse">
@@ -250,52 +259,64 @@ const Index = () => {
               <rect width="100" height="100" fill="#fefefe" />
               <rect width="100" height="100" fill="url(#gridPattern)" />
               
+              <defs>
+                <filter id="shadow">
+                  <feDropShadow dx="0.1" dy="0.1" stdDeviation="0.2" floodOpacity="0.3"/>
+                </filter>
+              </defs>
+              
               <path
                 d="M 48,18 L 50,20 L 52,19 L 55,21 L 55,35 L 53,38 L 48,38 L 48,18 Z"
-                fill="#ffc0cb"
-                stroke="#000000"
-                strokeWidth="0.25"
+                fill="#ffb3ba"
+                stroke="#1e293b"
+                strokeWidth="0.3"
                 strokeLinejoin="round"
+                filter="url(#shadow)"
               />
               
               <path
                 d="M 48,38 L 53,38 L 55,40 L 55,52 L 52,55 L 48,55 L 45,52 L 45,40 L 48,38 Z"
-                fill="#ffff99"
-                stroke="#000000"
-                strokeWidth="0.25"
+                fill="#ffffba"
+                stroke="#1e293b"
+                strokeWidth="0.3"
                 strokeLinejoin="round"
+                filter="url(#shadow)"
               />
               
               <path
                 d="M 55,35 L 58,35 L 62,33 L 65,35 L 68,33 L 70,35 L 72,38 L 70,42 L 68,45 L 65,48 L 62,50 L 58,52 L 55,52 L 55,40 L 55,35 Z"
-                fill="#e6e6fa"
-                stroke="#000000"
-                strokeWidth="0.25"
+                fill="#bae1ff"
+                stroke="#1e293b"
+                strokeWidth="0.3"
                 strokeLinejoin="round"
+                filter="url(#shadow)"
               />
               
               <path
                 d="M 30,30 L 35,28 L 40,30 L 45,28 L 48,30 L 48,38 L 45,40 L 40,42 L 35,40 L 30,42 L 25,40 L 22,35 L 25,30 L 30,30 Z"
-                fill="#d3d3d3"
-                stroke="#000000"
-                strokeWidth="0.25"
+                fill="#c7cedb"
+                stroke="#1e293b"
+                strokeWidth="0.3"
                 strokeLinejoin="round"
+                filter="url(#shadow)"
               />
               
               <path
                 d="M 25,42 L 30,42 L 35,45 L 40,48 L 45,50 L 45,52 L 40,55 L 35,58 L 30,60 L 25,58 L 22,55 L 20,50 L 20,45 L 25,42 Z"
-                fill="#ffe4b5"
-                stroke="#000000"
-                strokeWidth="0.25"
+                fill="#ffdfba"
+                stroke="#1e293b"
+                strokeWidth="0.3"
                 strokeLinejoin="round"
+                filter="url(#shadow)"
               />
               
               <path
                 d="M 60,55 L 65,53 L 70,55 L 75,58 L 78,62 L 80,68 L 78,72 L 75,75 L 70,78 L 65,80 L 60,78 L 56,75 L 54,70 L 55,65 L 58,60 L 60,55 Z"
-                fill="#f0e68c"
-                stroke="#000000"
-                strokeWidth="0.25"
+                fill="#baffc9"
+                stroke="#1e293b"
+                strokeWidth="0.3"
                 strokeLinejoin="round"
+                filter="url(#shadow)"
               />
               
               <path
@@ -319,13 +340,13 @@ const Index = () => {
                 fill="none"
               />
               
-              <text x="32" y="35" fontSize="2.5" fontFamily="serif" fill="#000000" opacity="0.8">Новгород</text>
-              <text x="50" y="28" fontSize="2" fontFamily="serif" fill="#000000" opacity="0.8" fontStyle="italic">Ладога</text>
-              <text x="50" y="46" fontSize="2.5" fontFamily="serif" fill="#000000" opacity="0.8">Ростов</text>
-              <text x="48" y="58" fontSize="2" fontFamily="serif" fill="#000000" opacity="0.8" fontStyle="italic">Муром</text>
-              <text x="62" y="45" fontSize="2" fontFamily="serif" fill="#000000" opacity="0.8" fontStyle="italic">Полоцк</text>
-              <text x="48" y="70" fontSize="2.5" fontFamily="serif" fill="#000000" opacity="0.8">Киев</text>
-              <text x="68" y="70" fontSize="2" fontFamily="serif" fill="#000000" opacity="0.8" fontStyle="italic">Чернигов</text>
+              <text x="30" y="36" fontSize="2.8" fontFamily="Georgia, serif" fill="#1e293b" fontWeight="600">Новгород</text>
+              <text x="49" y="27" fontSize="2.2" fontFamily="Georgia, serif" fill="#334155" fontStyle="italic">Ладога</text>
+              <text x="49" y="47" fontSize="2.8" fontFamily="Georgia, serif" fill="#1e293b" fontWeight="600">Ростов</text>
+              <text x="47" y="59" fontSize="2.2" fontFamily="Georgia, serif" fill="#334155" fontStyle="italic">Муром</text>
+              <text x="61" y="44" fontSize="2.2" fontFamily="Georgia, serif" fill="#334155" fontStyle="italic">Полоцк</text>
+              <text x="47" y="72" fontSize="2.8" fontFamily="Georgia, serif" fill="#1e293b" fontWeight="600">Киев</text>
+              <text x="67" y="72" fontSize="2.2" fontFamily="Georgia, serif" fill="#334155" fontStyle="italic">Чернигов</text>
             </svg>
 
             {filteredEvents.map((event, index) => (
@@ -342,19 +363,18 @@ const Index = () => {
                 <div className="relative flex flex-col items-center">
                   <div className="relative">
                     <div 
-                      className="w-1.5 h-1.5 rounded-full bg-black transition-all duration-300 group-hover:scale-150"
+                      className="w-2 h-2 rounded-full bg-slate-900 border-2 border-white transition-all duration-300 group-hover:scale-150 shadow-lg"
                     />
                   </div>
                   
-                  <div className="mt-1 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="mt-2 text-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-y-0 translate-y-1">
                     <div 
-                      className="text-[8px] font-bold px-1 py-0.5 whitespace-nowrap bg-white/90 border border-black rounded"
+                      className="text-[9px] font-bold px-2 py-1 whitespace-nowrap bg-slate-900 text-white border-2 border-white rounded-md shadow-xl"
                       style={{
-                        color: '#000000',
                         fontFamily: 'serif'
                       }}
                     >
-                      {event.city}
+                      {event.city} • {event.year}
                     </div>
                   </div>
                 </div>
@@ -362,16 +382,22 @@ const Index = () => {
             ))}
           </div>
 
-          <div className="mt-6 flex flex-wrap gap-4 justify-center">
-            {periods.map(period => (
-              <div key={period.id} className="flex items-center gap-2">
-                <div
-                  className="w-3 h-3 rounded-full border-2 bg-white"
-                  style={{ borderColor: period.color }}
-                />
-                <span className="text-sm text-slate-700 font-medium">{period.name}</span>
-              </div>
-            ))}
+          <div className="mt-8 pt-6 border-t-2 border-slate-300">
+            <h3 className="text-center text-sm font-bold text-slate-700 mb-4 uppercase tracking-wide">Легенда</h3>
+            <div className="flex flex-wrap gap-6 justify-center">
+              {periods.map(period => (
+                <div key={period.id} className="flex items-center gap-3 bg-white px-4 py-2 rounded-lg border border-slate-300 shadow-sm">
+                  <div
+                    className="w-4 h-4 rounded border-2 border-slate-700"
+                    style={{ backgroundColor: period.color }}
+                  />
+                  <div className="text-left">
+                    <div className="text-sm font-bold text-slate-900">{period.name}</div>
+                    <div className="text-xs text-slate-600">{period.years}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </Card>
 
