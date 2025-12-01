@@ -237,32 +237,51 @@ const Index = () => {
           ))}
         </div>
 
-        <Card className="p-4 md:p-8 bg-slate-800/30 backdrop-blur-xl border-slate-700/50 shadow-2xl animate-scale-in">
-          <div className="relative w-full aspect-[16/10] bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl overflow-hidden border-2 border-purple-500/30 shadow-inner">
+        <Card className="p-4 md:p-8 bg-white border-slate-300 shadow-2xl animate-scale-in">
+          <div className="relative w-full aspect-[16/10] bg-gradient-to-br from-blue-50 via-slate-50 to-blue-100 rounded-xl overflow-hidden border-2 border-slate-400">
             <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
               <defs>
-                <linearGradient id="borderGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#8B5CF6" stopOpacity="0.3" />
-                  <stop offset="50%" stopColor="#0EA5E9" stopOpacity="0.3" />
-                  <stop offset="100%" stopColor="#8B5CF6" stopOpacity="0.3" />
+                <pattern id="gridPattern" width="10" height="10" patternUnits="userSpaceOnUse">
+                  <line x1="0" y1="0" x2="0" y2="10" stroke="#cbd5e1" strokeWidth="0.05" opacity="0.3" />
+                  <line x1="0" y1="0" x2="10" y2="0" stroke="#cbd5e1" strokeWidth="0.05" opacity="0.3" />
+                </pattern>
+                <linearGradient id="territoryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="{getPeriodColor(selectedPeriod)}" stopOpacity="0.3" />
+                  <stop offset="100%" stopColor="{getPeriodColor(selectedPeriod)}" stopOpacity="0.15" />
                 </linearGradient>
               </defs>
               
-              <path
-                d="M 20,20 L 85,20 L 85,75 L 70,80 L 20,80 Z"
-                fill="url(#borderGradient)"
-                stroke="#8B5CF6"
-                strokeWidth="0.3"
-                opacity="0.2"
-              />
+              <rect width="100" height="100" fill="url(#gridPattern)" />
               
               <path
-                d="M 20,20 L 85,20 L 85,75 L 70,80 L 20,80 Z"
-                fill="none"
-                stroke="url(#borderGradient)"
-                strokeWidth="0.5"
-                strokeDasharray="2,1"
-                className="animate-pulse"
+                d="M 25,15 L 50,12 L 65,18 L 80,15 L 85,25 L 88,40 L 85,55 L 82,70 L 75,78 L 65,82 L 50,85 L 35,82 L 25,75 L 20,60 L 18,45 L 20,30 Z"
+                fill={selectedPeriod === 'all' ? '#fbbf24' : getPeriodColor(selectedPeriod)}
+                fillOpacity="0.35"
+                stroke="#64748b"
+                strokeWidth="0.4"
+                strokeDasharray="1,0.5"
+                className="transition-all duration-500"
+              />
+              
+              <path d="M 30,20 Q 35,25 40,20 Q 45,30 50,25 Q 55,35 60,30" 
+                stroke="#3b82f6" 
+                strokeWidth="0.8" 
+                fill="none" 
+                opacity="0.4"
+              />
+              
+              <path d="M 50,30 Q 52,40 54,50 Q 56,60 58,70" 
+                stroke="#3b82f6" 
+                strokeWidth="0.6" 
+                fill="none" 
+                opacity="0.4"
+              />
+              
+              <path d="M 35,40 Q 45,42 55,40 Q 65,42 75,45" 
+                stroke="#3b82f6" 
+                strokeWidth="0.5" 
+                fill="none" 
+                opacity="0.3"
               />
             </svg>
 
@@ -278,41 +297,26 @@ const Index = () => {
                 }}
               >
                 <div className="relative flex flex-col items-center">
-                  <svg width="32" height="40" viewBox="0 0 32 40" className="transition-transform duration-300 group-hover:scale-125">
-                    <rect x="4" y="8" width="24" height="20" rx="2" 
-                      fill={getPeriodColor(event.period)} 
-                      opacity="0.3"
-                      className="transition-opacity group-hover:opacity-50"
+                  <div className="relative">
+                    <div 
+                      className="w-2 h-2 rounded-full border-2 bg-white transition-all duration-300 group-hover:scale-150 group-hover:shadow-lg"
+                      style={{ 
+                        borderColor: getPeriodColor(event.period),
+                        boxShadow: `0 0 8px ${getPeriodColor(event.period)}80`
+                      }}
                     />
-                    <rect x="6" y="10" width="8" height="6" rx="1" 
-                      fill={getPeriodColor(event.period)} 
-                      opacity="0.6"
-                    />
-                    <rect x="18" y="10" width="8" height="6" rx="1" 
-                      fill={getPeriodColor(event.period)} 
-                      opacity="0.6"
-                    />
-                    <rect x="6" y="18" width="8" height="6" rx="1" 
-                      fill={getPeriodColor(event.period)} 
-                      opacity="0.6"
-                    />
-                    <rect x="18" y="18" width="8" height="6" rx="1" 
-                      fill={getPeriodColor(event.period)} 
-                      opacity="0.6"
-                    />
-                    <circle cx="16" cy="32" r="3" 
-                      fill={getPeriodColor(event.period)}
-                      className="animate-pulse-glow"
-                    />
-                    <line x1="16" y1="28" x2="16" y2="32" 
-                      stroke={getPeriodColor(event.period)} 
-                      strokeWidth="2"
-                    />
-                  </svg>
+                  </div>
                   
-                  <div className="mt-1 text-center">
-                    <div className="text-[10px] font-bold text-white bg-slate-900/80 px-2 py-0.5 rounded backdrop-blur-sm border border-purple-500/30 whitespace-nowrap">
-                      {event.city}
+                  <div className="mt-1.5 text-center">
+                    <div 
+                      className="text-[9px] font-bold px-1.5 py-0.5 whitespace-nowrap transition-all duration-300 group-hover:scale-110"
+                      style={{
+                        color: '#1e293b',
+                        fontFamily: 'serif',
+                        textShadow: '0 0 3px white, 0 0 5px white'
+                      }}
+                    >
+                      {event.city.toUpperCase()}
                     </div>
                   </div>
                 </div>
@@ -324,10 +328,10 @@ const Index = () => {
             {periods.map(period => (
               <div key={period.id} className="flex items-center gap-2">
                 <div
-                  className="w-3 h-3 rounded-full animate-pulse"
-                  style={{ backgroundColor: period.color }}
+                  className="w-3 h-3 rounded-full border-2 bg-white"
+                  style={{ borderColor: period.color }}
                 />
-                <span className="text-sm text-slate-300">{period.name}</span>
+                <span className="text-sm text-slate-700 font-medium">{period.name}</span>
               </div>
             ))}
           </div>
