@@ -247,106 +247,94 @@ const Index = () => {
               Историческая карта территорий
             </h2>
           </div>
-          <div className="relative w-full aspect-[16/10] bg-gradient-to-br from-amber-50 to-blue-50 rounded-lg overflow-hidden border-3 border-slate-800 shadow-inner">
-            <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-              <defs>
-                <pattern id="gridPattern" width="5" height="5" patternUnits="userSpaceOnUse">
-                  <line x1="0" y1="0" x2="0" y2="5" stroke="#000000" strokeWidth="0.03" opacity="0.15" />
-                  <line x1="0" y1="0" x2="5" y2="0" stroke="#000000" strokeWidth="0.03" opacity="0.15" />
-                </pattern>
-              </defs>
-              
-              <rect width="100" height="100" fill="#fefefe" />
-              <rect width="100" height="100" fill="url(#gridPattern)" />
-              
+          <div className="relative w-full aspect-[16/9] bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg overflow-hidden border-2 border-slate-400 shadow-inner">
+            <svg className="absolute inset-0 w-full h-full" viewBox="0 0 120 80" preserveAspectRatio="xMidYMid meet">
               <defs>
                 <filter id="shadow">
-                  <feDropShadow dx="0.1" dy="0.1" stdDeviation="0.2" floodOpacity="0.3"/>
+                  <feDropShadow dx="0.1" dy="0.1" stdDeviation="0.15" floodOpacity="0.25"/>
                 </filter>
               </defs>
               
+              <rect width="120" height="80" fill="#a8bfd5" />
+              
               <path
-                d="M 48,18 L 50,20 L 52,19 L 55,21 L 55,35 L 53,38 L 48,38 L 48,18 Z"
-                fill="#ffb3ba"
-                stroke="#1e293b"
-                strokeWidth="0.3"
+                d="M 60,8 L 65,10 L 70,12 L 75,15 L 80,18 L 85,22 L 88,26 L 90,30 L 91,35 L 90,40 L 88,45 L 85,50 L 82,54 L 78,57 L 73,59 L 68,60 L 63,60 L 58,59 L 53,57 L 48,54 L 44,50 L 40,46 L 37,42 L 35,38 L 34,34 L 35,30 L 37,26 L 40,22 L 44,19 L 48,17 L 53,15 L 58,13 L 60,8 Z"
+                fill="#e8775e"
+                fillOpacity="0.85"
+                stroke="#2c1810"
+                strokeWidth="0.25"
                 strokeLinejoin="round"
-                filter="url(#shadow)"
               />
               
               <path
-                d="M 48,38 L 53,38 L 55,40 L 55,52 L 52,55 L 48,55 L 45,52 L 45,40 L 48,38 Z"
-                fill="#ffffba"
-                stroke="#1e293b"
-                strokeWidth="0.3"
+                d="M 58,59 L 63,58 L 68,57 L 73,56 L 78,56 L 83,57 L 86,59 L 88,62 L 89,66 L 88,70 L 85,73 L 80,75 L 75,76 L 70,76 L 65,75 L 60,73 L 56,70 L 54,66 L 54,62 L 55,59 L 58,59 Z"
+                fill="#d4a574"
+                fillOpacity="0.85"
+                stroke="#2c1810"
+                strokeWidth="0.25"
                 strokeLinejoin="round"
-                filter="url(#shadow)"
               />
               
               <path
-                d="M 55,35 L 58,35 L 62,33 L 65,35 L 68,33 L 70,35 L 72,38 L 70,42 L 68,45 L 65,48 L 62,50 L 58,52 L 55,52 L 55,40 L 55,35 Z"
-                fill="#bae1ff"
-                stroke="#1e293b"
-                strokeWidth="0.3"
+                d="M 15,35 L 18,33 L 22,32 L 26,32 L 30,33 L 33,35 L 35,38 L 35,42 L 33,46 L 30,49 L 26,51 L 22,52 L 18,51 L 15,49 L 13,46 L 12,42 L 13,38 L 15,35 Z"
+                fill="#e0b3e0"
+                fillOpacity="0.75"
+                stroke="#2c1810"
+                strokeWidth="0.25"
                 strokeLinejoin="round"
-                filter="url(#shadow)"
               />
               
               <path
-                d="M 30,30 L 35,28 L 40,30 L 45,28 L 48,30 L 48,38 L 45,40 L 40,42 L 35,40 L 30,42 L 25,40 L 22,35 L 25,30 L 30,30 Z"
-                fill="#c7cedb"
-                stroke="#1e293b"
-                strokeWidth="0.3"
+                d="M 30,49 L 33,48 L 37,48 L 40,49 L 42,51 L 43,54 L 42,57 L 40,60 L 37,62 L 33,63 L 29,62 L 26,60 L 24,57 L 24,54 L 26,51 L 30,49 Z"
+                fill="#98d98e"
+                fillOpacity="0.75"
+                stroke="#2c1810"
+                strokeWidth="0.25"
                 strokeLinejoin="round"
-                filter="url(#shadow)"
               />
               
               <path
-                d="M 25,42 L 30,42 L 35,45 L 40,48 L 45,50 L 45,52 L 40,55 L 35,58 L 30,60 L 25,58 L 22,55 L 20,50 L 20,45 L 25,42 Z"
-                fill="#ffdfba"
-                stroke="#1e293b"
-                strokeWidth="0.3"
+                d="M 90,48 L 93,50 L 95,53 L 96,57 L 95,61 L 93,64 L 90,66 L 86,67 L 82,66 L 79,64 L 77,61 L 77,57 L 79,53 L 82,51 L 86,49 L 90,48 Z"
+                fill="#f5c77e"
+                fillOpacity="0.75"
+                stroke="#2c1810"
+                strokeWidth="0.25"
                 strokeLinejoin="round"
-                filter="url(#shadow)"
               />
               
               <path
-                d="M 60,55 L 65,53 L 70,55 L 75,58 L 78,62 L 80,68 L 78,72 L 75,75 L 70,78 L 65,80 L 60,78 L 56,75 L 54,70 L 55,65 L 58,60 L 60,55 Z"
-                fill="#baffc9"
-                stroke="#1e293b"
-                strokeWidth="0.3"
-                strokeLinejoin="round"
-                filter="url(#shadow)"
-              />
-              
-              <path
-                d="M 35,25 Q 38,27 41,26 Q 44,28 47,27"
-                stroke="#87ceeb"
-                strokeWidth="0.4"
+                d="M 48,28 Q 50,32 52,28 M 52,28 Q 54,33 56,30 M 56,30 Q 58,35 60,32"
+                stroke="#6699cc"
+                strokeWidth="0.6"
                 fill="none"
+                opacity="0.7"
               />
               
               <path
-                d="M 48,35 Q 50,40 52,45 Q 54,50 56,55"
-                stroke="#87ceeb"
+                d="M 60,35 Q 62,40 64,38 Q 66,42 68,40 Q 70,44 72,42"
+                stroke="#6699cc"
                 strokeWidth="0.5"
                 fill="none"
+                opacity="0.7"
               />
               
               <path
-                d="M 30,45 Q 35,46 40,46 Q 45,47 50,48"
-                stroke="#87ceeb"
-                strokeWidth="0.4"
+                d="M 55,40 Q 57,45 59,48 Q 61,52 63,55 Q 65,58 67,61"
+                stroke="#6699cc"
+                strokeWidth="0.7"
                 fill="none"
+                opacity="0.7"
               />
               
-              <text x="30" y="36" fontSize="2.8" fontFamily="Georgia, serif" fill="#1e293b" fontWeight="600">Новгород</text>
-              <text x="49" y="27" fontSize="2.2" fontFamily="Georgia, serif" fill="#334155" fontStyle="italic">Ладога</text>
-              <text x="49" y="47" fontSize="2.8" fontFamily="Georgia, serif" fill="#1e293b" fontWeight="600">Ростов</text>
-              <text x="47" y="59" fontSize="2.2" fontFamily="Georgia, serif" fill="#334155" fontStyle="italic">Муром</text>
-              <text x="61" y="44" fontSize="2.2" fontFamily="Georgia, serif" fill="#334155" fontStyle="italic">Полоцк</text>
-              <text x="47" y="72" fontSize="2.8" fontFamily="Georgia, serif" fill="#1e293b" fontWeight="600">Киев</text>
-              <text x="67" y="72" fontSize="2.2" fontFamily="Georgia, serif" fill="#334155" fontStyle="italic">Чернигов</text>
+              <text x="60" y="10" fontSize="3" fontFamily="Arial, sans-serif" fill="#cc0000" fontWeight="bold">862</text>
+              
+              <text x="63" y="33" fontSize="2" fontFamily="Arial, sans-serif" fill="#000000" fontWeight="600">Kievan Rus</text>
+              <text x="60" y="25" fontSize="1.8" fontFamily="Arial, sans-serif" fill="#000000">Novgorod</text>
+              <text x="58" y="52" fontSize="1.8" fontFamily="Arial, sans-serif" fill="#000000">Kiev</text>
+              
+              <text x="75" y="66" fontSize="1.8" fontFamily="Arial, sans-serif" fill="#000000">Khazars</text>
+              <text x="18" y="40" fontSize="1.6" fontFamily="Arial, sans-serif" fill="#000000">Scotland</text>
+              <text x="32" y="58" fontSize="1.6" fontFamily="Arial, sans-serif" fill="#000000">Emirate of Cordoba</text>
             </svg>
 
             {filteredEvents.map((event, index) => (
